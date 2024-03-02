@@ -10,13 +10,14 @@ void invertString(char *p_vetor, int length){
 	//	printf("%c", *(p_vetor+i));
 	//}
 	int i;
-	p_vetor = p_vetor+strlen(p_vetor)-1;
+	p_vetor = p_vetor+(length-1);
 	for (i=0; i<strlen(p_vetor); i++, p_vetor--){
 		printf("%c", *p_vetor);
 	}
 }
 void main(){
 	char stringVetor[SIZE];
+	printf("\nType in the string to invert: ");
 	gets(stringVetor);
 	invertString(stringVetor, strlen(stringVetor));
 }
